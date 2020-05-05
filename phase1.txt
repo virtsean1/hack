@@ -33,3 +33,9 @@ tmux keyboard shortcuts:
     ^b then ⎇↑ to resize the current pane up (works for all four arrows)
     ^b then x to kill the current pane (or window if it only has one pane)
     ^b then [ to enter copy mode, then four arrow keys to move, even past the visible point, which is great for scrolling--I don't use it much for copying/pasting.
+    
+    
+    
+    https://cas.vancooten.com/posts/2020/05/oscp-cheat-sheet-and-command-reference/
+    
+    https://ceso.github.io/posts/2020/04/a-journey-in-the-dark-an-adventures-tale-towards-oscp/
