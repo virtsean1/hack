@@ -96,3 +96,15 @@ aslr
 nasm
 https://gist.github.com/joswr1ght/a45d000ceaccf4cce6cb # disable DEP
 dmesg | grep NX # validate disabled execute
+
+
+https://vulnsec.com/2017/SANS-Holiday-Hack-Challenge-2016/
+zip2john SantaGram_v4.2.zip > zip.hash
+john ./zip.hash
+android studio and sdk tools
+android emulator
+https://support.portswigger.net/customer/portal/articles/1841102-Mobile%20Set-up_Android%20Device%20-%20Installing%20CA%20Certificate.html
+apktool
+https://github.com/skylot/jadx # analyze upnacked apk files
+
+intercept traffic is encrypted, use burp with cert
