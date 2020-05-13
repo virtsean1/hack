@@ -106,7 +106,6 @@ android emulator
 https://support.portswigger.net/customer/portal/articles/1841102-Mobile%20Set-up_Android%20Device%20-%20Installing%20CA%20Certificate.html
 apktool
 https://github.com/skylot/jadx # analyze upnacked apk files
-
 intercept traffic is encrypted, use burp with cert
 find . -name "key_for_the_door.txt" -print0 | xargs -0 cat
 strings
@@ -114,3 +113,16 @@ fuzzing
 objdump -M intel -d ./wumpus
 objdump -j .rodata -d ./wumpus
 objdump -s -j .data ./wumpus
+Python Exploit Dev. Assistance (PEDA) - https://github.com/longld/peda
+json data
+
+
+https://duo.com/blog/sans-holiday-hack-2017-writeup
+
+
+
+https://duo.com/blog/sans-holiday-hack-2018-writeup
+
+
+
+https://medium.com/@7a616368/sans-holiday-hack-challenge-2019-1e551b97bf48
