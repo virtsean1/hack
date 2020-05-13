@@ -108,3 +108,9 @@ apktool
 https://github.com/skylot/jadx # analyze upnacked apk files
 
 intercept traffic is encrypted, use burp with cert
+find . -name "key_for_the_door.txt" -print0 | xargs -0 cat
+strings
+fuzzing
+objdump -M intel -d ./wumpus
+objdump -j .rodata -d ./wumpus
+objdump -s -j .data ./wumpus
