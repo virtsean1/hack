@@ -39,3 +39,7 @@ tmux keyboard shortcuts:
     https://cas.vancooten.com/posts/2020/05/oscp-cheat-sheet-and-command-reference/
     
     https://ceso.github.io/posts/2020/04/a-journey-in-the-dark-an-adventures-tale-towards-oscp/
+    
+    apt install joplin # alternate to cherry tree
+    joplin
+    import jex file from here https://github.com/tjnull/TJ-JPT # nice pen testing template
