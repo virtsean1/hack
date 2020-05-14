@@ -42,6 +42,8 @@ tmux keyboard shortcuts:
     
     https://411hall.github.io/OSCP-Preparation/
     
+    https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets/
+    
     
     apt install joplin # alternate to cherry tree
     joplin
